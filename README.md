@@ -43,7 +43,7 @@ B3H1ND is a Python-based tool designed to help cybersecurity professionals scan 
 1. Clone the repository:
    ```bash
    git clone https://github.com/yezeiyashein/b3h1nd.git
-   cd B3H1ND
+   cd b3h1nd
    ```
 2. Install dependencies:
    ```bash
