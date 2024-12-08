@@ -42,7 +42,7 @@ B3H1ND is a Python-based tool designed to help cybersecurity professionals scan 
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/B3H1ND.git
+   git clone https://github.com/yezeiyashein/b3h1nd.git
    cd B3H1ND
    ```
 2. Install dependencies:
@@ -57,19 +57,19 @@ B3H1ND is a Python-based tool designed to help cybersecurity professionals scan 
 Run the tool with a target domain:
 
 ```bash
-python check_ip.py <DOMAIN>
+python b3h1nd.py <DOMAIN>
 ```
 
 ### Example:
 
 ```bash
-python check_ip.py example.com
+python b3h1nd.py example.com
 ```
 
 ### Help:
 
 ```bash
-python check_ip.py --help
+python b3h1nd.py --help
 ```
 
 ---
@@ -136,7 +136,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Contributions
 
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/yourusername/B3H1ND/issues) for open issues or submit a pull request.
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/yezeiyashein/b3h1nd/issues) for open issues or submit a pull request.
 
 ---
 
