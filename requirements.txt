@@ -1,0 +1,5 @@
+requests
+pyfiglet
+shodan
+prettytable
+colorama
