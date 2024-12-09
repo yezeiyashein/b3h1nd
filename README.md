@@ -1,21 +1,48 @@
 
-# B3H1ND - WAF IP Checker
+# B3H1ND - IP Scanner Behind WAF  
+### Version: 1.0.1  
 
 B3H1ND is a Python-based tool designed to help cybersecurity professionals scan IP addresses behind a Web Application Firewall (WAF). It gathers IPs associated with a domain from multiple sources and identifies active web servers, assisting in penetration testing and vulnerability assessments.
 
 ---
 
-## Features
+### Core Features  
+1. **WAF Detection**:  
+   - Identifies the WAF protecting the target domain using `wafw00f`.  
 
-- **WAF Detection**: Identifies if a target domain is behind a WAF and the WAF type (e.g., Cloudfront, Akamai, etc.).
-- **IP Enumeration**:
-  - Fetches associated IPs from multiple data sources:
-    - [Shodan](https://www.shodan.io/)
-    - [VirusTotal](https://www.virustotal.com/)
-    - [AlienVault](https://otx.alienvault.com/)
-    - [URLScan.io](https://urlscan.io/)
-- **Web Server Detection**:
-  - Identifies which IPs are hosting web servers and provides additional details such as HTTP status and server title.
+2. **IP Gathering**:  
+   - Retrieves IP addresses related to a domain from:  
+     - **Shodan API**  
+     - **VirusTotal API**  
+     - **AlienVault OTX**  
+     - **URLScan.io**  
+
+3. **Web Server Detection**:  
+   - Uses `httpx-toolkit` to verify which IPs are running web servers.  
+   - Displays HTTP status, server details, and title in a tabular format.  
+
+4. **Cross-Platform Support**:  
+   - Compatible with **Linux** and **Windows**.  
+   - Automatically adapts functionality based on the tools available on the platform.  
+
+5. **Graceful Handling of Missing APIs/Tools**:  
+   - Skips API checks if API keys are not provided.  
+   - Skips WAF detection if `wafw00f` is not installed.  
+   - Skips web server detection if `httpx-toolkit` is not installed.  
+
+### Updated Features (1.0.1)  
+1. **Tool Availability Checks**:  
+   - The script now verifies if `wafw00f` and `httpx-toolkit` are installed.  
+   - If either is missing, their respective functionality is skipped with appropriate warnings.  
+
+2. **Cross-Platform Enhancements**:  
+   - Improved detection and handling of external tools using `shutil.which`, making it easier to run on Windows or Linux.  
+
+3. **Enhanced Error Handling**:  
+   - Clear and concise messages for API errors and tool issues.  
+
+4. **Improved Output**:  
+   - Displays detailed tables for web server detection, including HTTP status codes and server titles.  
 
 ---
 
